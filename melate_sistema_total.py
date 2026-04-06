@@ -56,7 +56,12 @@ def score_numero(n, frecuencia, simulacion):
     return score
 
     return score
+simulacion = simulacion_montecarlo(5000)
 
+candidatos.sort(
+    key=lambda x: score_numero(x, frecuencia, simulacion),
+    reverse=True
+)
 # -------------------------
 # VALIDACIONES
 # -------------------------
