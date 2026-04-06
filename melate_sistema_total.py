@@ -1,15 +1,15 @@
 import random
 
-def leer_historial():
-    numeros = []
-    try:
-        with open("historial.txt", "r") as f:
-            for linea in f:
-                fila = [int(x) for x in linea.strip().split(",")]
-                numeros.extend(fila)
-    except:
-        pass
-    return numeros
+def generar_numeros():
+    base = list(range(1, 57))
+    
+    # simular patrón (evitar repetidos recientes)
+    seleccion = random.sample(base, 6)
+    
+    # ordenar (se ve más profesional)
+    seleccion.sort()
+    
+    return seleccion
 
 def analizar_frecuencia(numeros):
     frecuencia = {}
