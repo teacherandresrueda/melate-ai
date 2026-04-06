@@ -1,5 +1,15 @@
 import random
+import json
+import os
 
+DATA_FILE = "historial_melate.json"
+
+def leer_historial():
+    if not os.path.exists(DATA_FILE):
+        return []  # evita que falle
+
+    with open(DATA_FILE, "r") as f:
+        return json.load(f)
 def generar_numeros():
     base = list(range(1, 57))
     
