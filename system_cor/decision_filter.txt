@@ -1,0 +1,21 @@
+FILTER NAME: Reality Filter v1
+
+STEP 1: Is the input based on data?
+- YES → Continue
+- NO → Mark as "INTUITIVE INPUT"
+
+STEP 2: Does the pattern repeat in historical data?
+- YES → Continue
+- NO → Mark as "LOW CONFIDENCE"
+
+STEP 3: Is there statistical support?
+- YES → VALID PATTERN
+- NO → REJECT
+
+FINAL DECISION:
+- VALID → Allow suggestion
+- LOW CONFIDENCE → Show warning
+- REJECT → Do not display
+
+RULE:
+Intuition NEVER overrides data.
